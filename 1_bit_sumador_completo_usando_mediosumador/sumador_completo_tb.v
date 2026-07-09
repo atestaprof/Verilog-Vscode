@@ -1,9 +1,14 @@
-module full_half_add_1bit_tb  ;
+module sumador_completo_tb  ;
    reg a, b, cin              ;  //register declaration for input signals a & b
    wire sum, carry	         ;  //wire declaration for nets
    reg new_sum, new_carry     ;  //register declaration for verification of sum and carry
 
-full_half_add_1bit dut(
+initial begin
+   $dumpfile("sumador_completo_tb.vcd"); // Nombre del archivo de ondas
+   $dumpvars(0, sumador_completo_tb);    // Vuelca todas las señales del módulo
+end
+
+sumador_completo dut(
                        .i_a(a)           ,		//input
                        .i_b(b)           ,		//input
                        .i_cin(cin)       ,      //input
