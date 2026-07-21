@@ -2,11 +2,11 @@ module alu(
            a         ,  //input
            b         ,  //input
            select    ,  //input
-           zero      ,  //zero flag
-           carry     ,  //carry flag
-           sign      ,  //sign flag
-           parity    ,  //parity flag
-           overflow  ,  //overflow flag
+           zero      ,  //zero bandera
+           carry     ,  //carry bandera
+           sign      ,  //sign bandera
+           parity    ,  //parity bandera
+           overflow  ,  //overflow bandera
            out          //output
            )         ;
 
@@ -15,7 +15,7 @@ input [1:0] select                              ;
 output reg [3:0]out                             ;
 output reg zero, carry, sign, parity, overflow  ;
 
-always @ (a or b)
+always @ (*)
    begin
       case (select)
          0 : {carry, out} = a + b   ;
