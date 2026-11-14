@@ -1,1 +1,5 @@
+build/
+*.vvp
+*.vcd
 pyghidra_mcp_projects/
+.DS_Store
